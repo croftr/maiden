@@ -27,7 +27,7 @@ function App() {
     <>
       <div className="headerAndTools">
         <div className='header'>
-          <h1 >Header</h1>
+          <h1 >pipline</h1>
         </div>
         <button onClick={onChangeType}>{type}</button>
       </div>
