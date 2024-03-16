@@ -25,13 +25,15 @@ function App() {
   return (
 
     <>
-      <div className='header'>
-        <h1 >Header</h1>
+      <div className="headerAndTools">
+        <div className='header'>
+          <h1 >Header</h1>
+        </div>
+        <button onClick={onChangeType}>{type}</button>
       </div>
 
-      <button onClick={onChangeType}>{type}</button>
 
-      <div className="thumbnails" style={{ display: "flex", gap: 8, minHeight: "calc(100vh - 356px)", padding: 12 }}>
+      <div className="thumbnails">
         {images.map((image, index) => (<div key={`image-${index}`}><img style={{ width: 100, height: 100 }} src={image} alt={`image-${index}`} /></div>))}
       </div>
 

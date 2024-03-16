@@ -16,3 +16,15 @@
   display: flex;
   justify-content: center;
  }
+
+ .thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  min-height: "calc(100vh - 356px)";
+ }
+
+ 
+ /* style={{ display: "flex", gap: 8, minHeight: "calc(100vh - 356px)", padding: 12 }} */
