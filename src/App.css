@@ -24,9 +24,19 @@
   width: "100%";
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+.buttons__wrapper {
+  display: flex;  
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;  
+  margin-bottom: 12px;
 }
 
 .thumbnails {
+  padding: 8px;
   grid-column: 1 / -1;
   grid-gap: 8px;
   display: grid;
