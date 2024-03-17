@@ -72,7 +72,7 @@ function App() {
             <img src="src/assets/homeImages/banner.jpg" alt="horseflaps.com banner" /></a>
         </div>
         <div className="buttons__wrapper">          
-        {buttons.map((image, index) => (<div key={`image-${index}`}><img src={image} alt={`image-${index}`} /></div>))}
+        {buttons.sort().map((image, index) => (<div key={`image-${index}`}><img src={image} alt={`image-${index}`} /></div>))}
       </div>
       </div>
 
