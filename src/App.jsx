@@ -1,25 +1,52 @@
-import { useState } from 'react'
-
-import d1 from './assets/desktop/i1.jpg'
-import d2 from './assets/desktop/i2.jpg'
-import m1 from './assets/mobile/i1.jpg'
-import m2 from './assets/mobile/i2.jpg'
+import { useState, useEffect } from 'react'
 
 import './App.css'
 
-
-
 function App() {
+
+  const desktopThmbnails = import.meta.glob('./assets/1ironMaiden/thumbnails/bak/*.{jpg,jpeg,png,svg}');
+  const mobileThumbnails = import.meta.glob('./assets/mobile/*.{jpg,jpeg,png,svg}');
 
   const [type, setType] = useState('desktop');
 
-  const [images, setImages] = useState([d1, d2]);
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    console.log("use effect ");
+    onSetDescktop();
+  }, []);
+
+  const onSetDescktop = () => {
+    const urls = [];
+    for (const image in desktopThmbnails) {
+      // Extract the URL using a new URL object (prevents path issues)
+      urls.push(new URL(image, import.meta.url).href);
+    }
+
+    console.log("check ", urls);
+
+    setImages(urls);
+  }
+
+  const onSetMobile = () => {
+    const urls = [];
+    for (const image in mobileThumbnails) {
+      // Extract the URL using a new URL object (prevents path issues)
+      urls.push(new URL(image, import.meta.url).href);
+    }
+
+    console.log("check ", urls);
+
+    setImages(urls);
+  }
+
 
   const onChangeType = () => {
+
     if (type === 'desktop') {
-      setImages([m1, m2]);
+      onSetMobile();
     } else {
-      setImages([d1, d2]);
+      onSetDescktop();
     }
     setType(type === 'desktop' ? 'mobile' : 'desktop');
   }
@@ -28,9 +55,9 @@ function App() {
     <>
       <div className="headerAndTools">
         <div className='header'>
-        
-<a href="http://horseflaps.com" target="_blank"> 
-		 <img src="src/assets/homeImages/banner.jpg" alt="horseflaps.com banner"/></a>
+
+          <a href="http://horseflaps.com" target="_blank">
+            <img src="src/assets/homeImages/banner.jpg" alt="horseflaps.com banner" /></a>
 
 
           <h1 >pipeline</h1>
