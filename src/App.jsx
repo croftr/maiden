@@ -64,7 +64,7 @@ function App() {
 
 
       <div className="thumbnails">
-        {images.map((image, index) => (<div key={`image-${index}`}><img style={{ width: 100, height: 100 }} src={image} alt={`image-${index}`} /></div>))}
+        {images.map((image, index) => (<div key={`image-${index}`}><img style={{ height: "100%", width: "100%" }} src={image} alt={`image-${index}`} /></div>))}
       </div>
 
       <div className="footer">
