@@ -5,8 +5,8 @@ import './App.css'
 function App() {
 
   const desktopThmbnails = import.meta.glob('./assets/1ironMaiden/thumbnails/bak/*.{jpg,jpeg,png,svg}');
-  const mobileThumbnails = import.meta.glob('./assets/mobile/*.{jpg,jpeg,png,svg}');
-
+  const mobileThumbnails = import.meta.glob('./assets/1ironMaiden/thumbnails/*.{jpg,jpeg,png,svg}');
+  
   const [type, setType] = useState('desktop');
 
   const [images, setImages] = useState([]);
@@ -58,11 +58,8 @@ function App() {
 
           <a href="http://horseflaps.com" target="_blank">
             <img src="src/assets/homeImages/banner.jpg" alt="horseflaps.com banner" /></a>
-
-
-          <h1 >pipeline</h1>
         </div>
-        <button onClick={onChangeType}>{type}</button>
+        <button className='button' onClick={onChangeType}>{type}</button>
       </div>
 
 

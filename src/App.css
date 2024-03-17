@@ -11,6 +11,14 @@
   justify-content: center;
  }
 
+.headerAndTools {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  gap: 8px;
+}
+
+
  .footer {
   width: "100%";
   display: flex;
