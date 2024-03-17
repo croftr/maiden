@@ -7,6 +7,8 @@ import m2 from './assets/mobile/i2.jpg'
 
 import './App.css'
 
+
+
 function App() {
 
   const [type, setType] = useState('desktop');
@@ -23,11 +25,15 @@ function App() {
   }
 
   return (
-
     <>
       <div className="headerAndTools">
         <div className='header'>
-          <h1 >pipline</h1>
+        
+<a href="http://horseflaps.com" target="_blank"> 
+		 <img src="src/assets/homeImages/banner.jpg" alt="horseflaps.com banner"/></a>
+
+
+          <h1 >pipeline</h1>
         </div>
         <button onClick={onChangeType}>{type}</button>
       </div>
