@@ -68,8 +68,20 @@ function App() {
       <div className="headerAndTools">
         <div className='header'>
 
-          <a href="http://horseflaps.com" target="_blank">
-            <img src="src/assets/homeImages/banner.jpg" alt="horseflaps.com banner" /></a>
+        <a href="http://horseflaps.com" target="_blank">
+          <img src="src/buttons/homeButton.kip" id="home" alt="" />
+        </a>
+        <a href="http://horseflaps.com" target="_blank">
+          <img src="src/assets/homeImages/banner.jpg" alt="horseflaps.com banner" />
+        </a>
+        <a href="mailto:mikey@horseflaps.com" target="_blank">
+          <img src="src/buttons/emailButton.kip" id="email" alt="" />
+        </a>
+
+
+
+            
+            
         </div>
         <div className="buttons__wrapper">          
         {buttons.sort().map((image, index) => (<div key={`image-${index}`}><img src={image} alt={`image-${index}`} /></div>))}
